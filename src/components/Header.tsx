@@ -7,7 +7,7 @@ import { Link } from 'react-scroll';
 import config from '../config/index.json';
 
 const Menu = () => {
-  const { navigation, company, callToAction } = config;
+  const { navigation, company } = config;
   const { name: companyName, logo } = company;
 
   return (
@@ -58,7 +58,6 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
-              
             </div>
           </nav>
         </div>
@@ -107,7 +106,6 @@ const Menu = () => {
                   </Link>
                 ))}
               </div>
-              
             </div>
           </Popover.Panel>
         </Transition>
