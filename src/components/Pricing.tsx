@@ -131,10 +131,12 @@ const Pricing = () => {
       )
       .then(
         (result) => {
+          // eslint-disable-next-line no-console
           console.log('Email envoyé avec succès:', result.text);
           setIsSubmitted(true); // Affichage de la confirmation
         },
         (error) => {
+          // eslint-disable-next-line no-console
           console.error("Erreur lors de l'envoi de l'email:", error.text);
         }
       );
