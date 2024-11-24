@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Divider from './Divider';
 import config from '../config/index.json';
+import Divider from './Divider';
 
 const Product = () => {
   const { product } = config;
