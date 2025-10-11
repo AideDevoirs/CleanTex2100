@@ -8,7 +8,6 @@ const ReviewsPage = () => {
   const [reviews, setReviews] = useState<any[]>([]);
   const [page, setPage] = useState(1);
 
-  // Charger les avis depuis le fichier JSON
   useEffect(() => {
     fetch('/api/reviews')
       .then((res) => res.json())
