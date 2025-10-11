@@ -1,9 +1,8 @@
 /* eslint-disable */
-import { AppProps } from 'next/app';
-import Head from 'next/head'; // Importez Head pour gérer les balises <head>
+import { AppProps } from "next/app";
+import Head from "next/head"; // Importez Head pour gérer les balises <head>
 
-
-import '../styles/main.css';
+import "../styles/main.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <>

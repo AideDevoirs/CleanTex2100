@@ -48,7 +48,7 @@ const Menu = () => {
               {navigation.map((item) => (
                 <Link
                   spy={true}
-                  active="active"
+                  activeClass="active"
                   smooth={true}
                   duration={1000}
                   key={item.name}
@@ -95,7 +95,7 @@ const Menu = () => {
                 {navigation.map((item) => (
                   <Link
                     spy={true}
-                    active="active"
+                    activeClass="active"
                     smooth={true}
                     duration={1000}
                     key={item.name}

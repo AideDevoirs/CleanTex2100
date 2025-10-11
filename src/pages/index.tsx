@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import About from '../components/About';
 import Analytics from '../components/Analytics';
@@ -9,8 +9,16 @@ import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
 import CleaningForm from '../components/Pricing';
 import Product from '../components/Product';
+import ReviewForm from '../components/ReviewForm';
+import ReviewsList from '../components/ReviewsList';
 
 const App = () => {
+  const [refresh, setRefresh] = useState(false);
+
+  const handleReviewSubmit = () => {
+    setRefresh((r) => !r); // Force le refresh de ReviewsList
+  };
+
   return (
     <div className={`bg-background grid gap-y-16 overflow-hidden`}>
       <div className={`relative bg-background`}>
@@ -35,6 +43,13 @@ const App = () => {
       </div>
       <div>
         <CleaningForm />
+      </div>
+      <div
+        id="reviews"
+        className="w-full sm:w-[500px] md:w-[652px] mx-auto bg-white rounded-lg shadow-lg p-6 mb-10"
+      >
+        <ReviewForm onSubmit={handleReviewSubmit} />
+        <ReviewsList refresh={refresh} />
       </div>
       <div>
         <Canvas />
