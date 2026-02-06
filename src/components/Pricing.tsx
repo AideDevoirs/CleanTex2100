@@ -172,6 +172,7 @@ const Pricing = () => {
               <option value="">Selecteer een type</option>
               <option value="car">Auto</option>
               <option value="carpet">Tapijt</option>
+              <option value="zetel">zetel</option>
               <option value="other">Anders</option>
             </select>
             {errors.cleaningType && (
